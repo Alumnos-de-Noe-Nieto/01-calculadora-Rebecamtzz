@@ -30,4 +30,21 @@ def validar_simbolos(cadena: str) -> bool:
         >>> validar_simbolos("  XIV  ")
         True
     """
-    raise NotImplementedError()
+        # Primero quitamos los espacios al inicio y al final
+    cadena = cadena.strip()
+
+    # Si después de quitar espacios queda vacío, no es válido
+    if cadena == "":
+        return False
+
+    # Definimos los símbolos romanos permitidos
+    simbolos_validos = {"I", "V", "X", "L", "C", "D", "M"}
+
+    # Recorremos la cadena letra por letra
+    for caracter in cadena:
+        # Si encontramos algo que no es romano, ya no es válido
+        if caracter not in simbolos_validos:
+            return False
+
+    # Si todo pasó bien, entonces sí es válido
+    return True
