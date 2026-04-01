@@ -34,7 +34,6 @@ Convierte una cadena de números romanos válida a su valor entero correspondien
     Raises:
         ExpresionInvalida: Si la cadena no es válida según las reglas de números romanos (símbolos inválidos, repeticiones inválidas, orden incorrecto, restas inválidas)
     """
-
 from calculadora.error import ExpresionInvalida
 from calculadora.validaciones.alfabeto import validar_simbolos
 from calculadora.validaciones.orden_descendente import validar_orden_descendente
@@ -42,12 +41,8 @@ from calculadora.validaciones.repeticiones_icxm import validar_repeticiones_icxm
 from calculadora.validaciones.repeticiones_vld import validar_repeticiones_vld
 from calculadora.validaciones.restas import validar_restas
 
-def romano_a_entero(cadena: str) -> int:
-    """
-    Convierte una cadena de números romanos válida a su valor entero correspondiente.
-    """
 
-    # VALIDACIONES (PISTA DEL PROFE)
+def romano_a_entero(cadena: str) -> int:
 
     if not validar_simbolos(cadena):
         raise ExpresionInvalida("símbolos inválidos")
@@ -64,7 +59,6 @@ def romano_a_entero(cadena: str) -> int:
     if not validar_restas(cadena):
         raise ExpresionInvalida("restas inválidas")
 
-    # VALORES
     VALORES = {
         "I": 1, "V": 5, "X": 10,
         "L": 50, "C": 100, "D": 500, "M": 1000
@@ -72,17 +66,13 @@ def romano_a_entero(cadena: str) -> int:
 
     total = 0
     valor_previo = 0
-
-    # PISTA: recorrer de derecha a izquierda
     for simbolo in reversed(cadena):
         valor = VALORES[simbolo]
 
-        # si es menor → restar
         if valor < valor_previo:
             total -= valor
         else:
             total += valor
 
         valor_previo = valor
-
-    return total 
+    return total
