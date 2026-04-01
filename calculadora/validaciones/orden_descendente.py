@@ -79,4 +79,4 @@ def validar_orden_descendente(cadena: str) -> bool:
 
             i += 1
 
-    return True
+    return True 
