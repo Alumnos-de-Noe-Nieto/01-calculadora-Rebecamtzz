@@ -42,4 +42,4 @@ def validar_repeticiones_vld(cadena: str) -> bool:
         if patron in cadena:
             return False
 
-    return True 
+    return True
