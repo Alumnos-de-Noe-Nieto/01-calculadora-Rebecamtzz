@@ -43,4 +43,37 @@ def validar_restas(cadena: str) -> bool:
         >>> validar_restas("MCMXCIV")
         True
     """
-    raise NotImplementedError()
+# PISTA: valores de los símbolos
+    VALORES = {
+        "I": 1, "V": 5, "X": 10,
+        "L": 50, "C": 100, "D": 500, "M": 1000
+    }
+
+    # PISTA: restas válidas
+    SUSTRACCIONES_VALIDAS = {"IV", "IX", "XL", "XC", "CD", "CM"}
+
+    i = 0
+
+    # PISTA: recorrer con índice
+    while i < len(cadena) - 1:
+
+        # PISTA: detectar resta (valor actual < siguiente)
+        if VALORES[cadena[i]] < VALORES[cadena[i+1]]:
+
+            # formar el par
+            par = cadena[i:i+2]
+
+            # PISTA: verificar si es válida
+            if par not in SUSTRACCIONES_VALIDAS:
+                return False
+
+            # PISTA: evitar repetición antes (ej: IIX)
+            if i > 0 and cadena[i-1] == cadena[i]:
+                return False
+
+            i += 2  # avanzamos dos posiciones
+
+        else:
+            i += 1  # seguimos normal
+
+    return True

@@ -30,20 +30,10 @@ def validar_simbolos(cadena: str) -> bool:
         >>> validar_simbolos("  XIV  ")
         True
     """
-        #quitamos espacios
-    cadena = cadena.strip()
-
-    # Si queda vacio no es valido
+  # verificar que no esté vacía
     if cadena == "":
         return False
+   # validar alfabeto
+    simbolos_validos = set("IVXLCDM")
 
-    # Definimos letraspara numeros romanos
-    simbolos_validos = {"I", "V", "X", "L", "C", "D", "M"}
-
-    # Recorremos letra por letra
-    for caracter in cadena:
-        # si no es las letras definidas anteriro es falso
-        if caracter not in simbolos_validos:
-            return False
-    # Si son las letras definisdas continua
-    return True
+    return set(cadena).issubset(simbolos_validos)

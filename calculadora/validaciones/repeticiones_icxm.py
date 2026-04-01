@@ -36,20 +36,12 @@ def validar_repeticiones_icxm(cadena: str) -> bool:
         >>> validar_repeticiones_icxm("MMMM")
         False
     """
-def validar_repeticiones_icxm(cadena: str) -> bool:
-    # al revisar que si son mas es ivalida la funcion 
+    # PISTA: patrones inválidos de 4 repeticiones
+    patrones_invalidos = ["IIII", "XXXX", "CCCC", "MMMM"]
 
-    if "IIII" in cadena:
-        return False
+    # PISTA: usar "in" para buscar patrones
+    for patron in patrones_invalidos:
+        if patron in cadena:
+            return False
 
-    if "XXXX" in cadena:
-        return False
-
-    if "CCCC" in cadena:
-        return False
-
-    if "MMMM" in cadena:
-        return False
-
-    # Si todo está bien
     return True
