@@ -76,4 +76,4 @@ def validar_restas(cadena: str) -> bool:
         else:
             i += 1  # seguimos normal
 
-    return True
+    return True 
