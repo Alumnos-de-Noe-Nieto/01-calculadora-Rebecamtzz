@@ -44,4 +44,4 @@ def validar_repeticiones_icxm(cadena: str) -> bool:
         if patron in cadena:
             return False
 
-    return True 
+    return True
