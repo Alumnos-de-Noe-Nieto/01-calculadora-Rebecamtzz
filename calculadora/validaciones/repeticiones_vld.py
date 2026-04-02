@@ -34,12 +34,9 @@ def validar_repeticiones_vld(cadena: str) -> bool:
         >>> validar_repeticiones_vld("DD")
         False
     """
-     # PISTA: símbolos que no se pueden repetir
+
+    # no se pueden repetir
     patrones_invalidos = ["VV", "LL", "DD"]
 
-    # PISTA: usar "in"
-    for patron in patrones_invalidos:
-        if patron in cadena:
-            return False
-
-    return True
+    # si encuentra alguno  False
+    return all(patron not in cadena for patron in patrones_invalidos)

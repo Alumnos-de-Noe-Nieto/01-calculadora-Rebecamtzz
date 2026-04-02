@@ -4,7 +4,9 @@ Este módulo contiene las funciones para parsear expresiones aritméticas con n�
 """
 
 from dataclasses import dataclass
+
 from calculadora.error import ExpresionInvalida
+
 
 @dataclass
 class Token:
@@ -146,7 +148,7 @@ def tokenizar_expresion(expresion: str) -> list[Token]:
         [Token("ROMANO", "XIV", 0), Token("ESPACIO", " ", 3), Token("SUMA", "+", 4), ...]
         >>> tokenizar_expresion("X+V")
         [Token("ROMANO", "X", 0), Token("SUMA", "+", 1), Token("ROMANO", "V", 2)]
-    """ 
+    """
 
 
 def validar_estructura_tokens(tokens: list[Token]) -> bool:

@@ -1,9 +1,7 @@
 """
 Nivel 1: Análisis Léxico - Alfabeto (Σ = {I, V, X, L, C, D, M})
 """
-
-def validar_simbolos(cadena: str) -> bool:
-    """
+"""
     Valida si todos los caracteres de la cadena pertenecen al alfabeto romano.
 
     💡 PISTA: Usa .strip() para eliminar espacios en blanco laterales
@@ -30,6 +28,7 @@ def validar_simbolos(cadena: str) -> bool:
         >>> validar_simbolos("  XIV  ")
         True
     """
+def validar_simbolos(cadena: str) -> bool:
   # verificar que no esté vacía
     if cadena == "":
         return False

@@ -59,7 +59,7 @@ def romano_a_entero(cadena: str) -> int:
     if not validar_restas(cadena):
         raise ExpresionInvalida("restas inválidas")
 
-    VALORES = {
+    valores = {
         "I": 1, "V": 5, "X": 10,
         "L": 50, "C": 100, "D": 500, "M": 1000
     }
@@ -67,7 +67,7 @@ def romano_a_entero(cadena: str) -> int:
     total = 0
     valor_previo = 0
     for simbolo in reversed(cadena):
-        valor = VALORES[simbolo]
+        valor = valores[simbolo]
 
         if valor < valor_previo:
             total -= valor
