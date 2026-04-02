@@ -528,14 +528,14 @@ Found 3 errors.
 
 Antes de hacer `git commit` y `git push`, verifica:
 
-- [ ] Todos los niveles implementados (1-8)
-- [ ] `pytest tests/ -v` muestra **82 passed**
-- [ ] `ruff check calculadora/` muestra **All checks passed!**
-- [ ] `python3 -m calculadora` funciona (REPL)
-- [ ] Probé expresiones de ejemplo en el REPL
-- [ ] Revisé el diff de git para confirmar cambios
-- [ ] Commit con mensaje claro: `git commit -m "feat: descripción"`
-- [ ] Push a GitHub: `git push`
+- [x] Todos los niveles implementados (1-8)
+- [x] `pytest tests/ -v` muestra **82 passed**
+- [x] `ruff check calculadora/` muestra **All checks passed!**
+- [x] `python3 -m calculadora` funciona (REPL)
+- [x] Probé expresiones de ejemplo en el REPL
+- [x] Revisé el diff de git para confirmar cambios
+- [x] Commit con mensaje claro: `git commit -m "feat: descripción"`
+- [x] Push a GitHub: `git push`
 
 ---
 
