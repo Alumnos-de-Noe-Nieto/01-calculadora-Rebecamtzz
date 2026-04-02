@@ -269,13 +269,13 @@ Si tienes dudas durante el desarrollo:
 
 ## 📋 Checklist de Entrega
 
-- [ ] Todos los niveles implementados (1-8)
-- [ ] Todas las pruebas pasan: `pytest tests/ -v` (82 passed)
-- [ ] Calidad de código correcta: `ruff check calculadora/` (All checks passed!)
-- [ ] CLI funcional para pruebas manuales: `python3 -m calculadora`
-- [ ] Commit con mensaje claro
-- [ ] Push a GitHub Classroom
-- [ ] Verificar resultado en GitHub Actions
+- [X] Todos los niveles implementados (1-8)
+- [X] Todas las pruebas pasan: `pytest tests/ -v` (82 passed)
+- [X] Calidad de código correcta: `ruff check calculadora/` (All checks passed!)
+- [X] CLI funcional para pruebas manuales: `python3 -m calculadora`
+- [X] Commit con mensaje claro
+- [X] Push a GitHub Classroom
+- [X] Verificar resultado en GitHub Actions
 
 ---
 
