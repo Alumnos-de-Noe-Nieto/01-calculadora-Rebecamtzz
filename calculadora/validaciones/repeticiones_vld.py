@@ -34,4 +34,9 @@ def validar_repeticiones_vld(cadena: str) -> bool:
         >>> validar_repeticiones_vld("DD")
         False
     """
-    raise NotImplementedError()
+
+    # no se pueden repetir
+    patrones_invalidos = ["VV", "LL", "DD"]
+
+    # si encuentra alguno  False
+    return all(patron not in cadena for patron in patrones_invalidos)
