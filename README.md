@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/fRu_XUxI)
 # Calculadora de Números Romanos - Práctica Unidad 1
 
 Bienvenido a tu primer proyecto de **Lenguajes y Autómatas I**.
@@ -268,13 +269,13 @@ Si tienes dudas durante el desarrollo:
 
 ## 📋 Checklist de Entrega
 
-- [ ] Todos los niveles implementados (1-8)
-- [ ] Todas las pruebas pasan: `pytest tests/ -v` (82 passed)
-- [ ] Calidad de código correcta: `ruff check calculadora/` (All checks passed!)
-- [ ] CLI funcional para pruebas manuales: `python3 -m calculadora`
-- [ ] Commit con mensaje claro
-- [ ] Push a GitHub Classroom
-- [ ] Verificar resultado en GitHub Actions
+- [X] Todos los niveles implementados (1-8)
+- [X] Todas las pruebas pasan: `pytest tests/ -v` (82 passed)
+- [X] Calidad de código correcta: `ruff check calculadora/` (All checks passed!)
+- [X] CLI funcional para pruebas manuales: `python3 -m calculadora`
+- [X] Commit con mensaje claro
+- [X] Push a GitHub Classroom
+- [X] Verificar resultado en GitHub Actions
 
 ---
 
